@@ -5,9 +5,10 @@
     <title>Larabook</title>
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('dist/main.css')}}">
 
 </head>
-<body style="padding-top:70px;">
+<body>
 
     @include('layouts.partials.nav')
 
