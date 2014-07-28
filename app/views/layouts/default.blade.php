@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 </head>
-<body>
+<body style="padding-top:70px;">
+
+    @include('layouts.partials.nav')
 
     <div class="container">
         @yield('content')
