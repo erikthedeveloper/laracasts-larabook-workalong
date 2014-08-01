@@ -7,7 +7,6 @@ More descriptive/helpful goodies to come. Enjoy the commit messages!
 
 **Initial commit (running out of Homestead/Vagrant)**
 
-
 **Add composer dependencies and register service providers**
 
     - composer.json
@@ -25,6 +24,7 @@ More descriptive/helpful goodies to come. Enjoy the commit messages!
     - remove `local/database.php`
     - use `get_env('DB_NAME')` for MySQL
 
+---
 
 **Kickstart pages/view related files**
 
@@ -60,3 +60,31 @@ More descriptive/helpful goodies to come. Enjoy the commit messages!
 
 
 **Adds <link> to compiled .css and minimal content in .scss file**
+
+---
+
+**Composer - Adds/Registers barryvdh ide-helper (require-dev)**
+
+    - Adds `"barryvdh/laravel-ide-helper": "1.*"` to composer.json > require-dev
+    - Registers `'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',`
+
+**Initialize codeception via `codecept bootstrap` also enable `Laravel4` module**
+
+**New test: SignUpCept - Basic steps outlined. Feature not implemented**
+
+    - `$I->wantTo('sign up for a LaraBook account');`
+    - `$I->fillField('Username:', $username);`...
+    - `$I->click('Sign Up');`
+    - ... `$I->see('Welcome');` ...
+    - `// @TODO $I->seeRecord('users', [`
+
+**Implementing BDD User Sign Up/Registration (Routes, Controller, Views)**
+
+    Same concept as Laracasts... different naming. Some divergence from lesson
+    - Adds Resource-ful `UsersController`
+        - @create -> view `pages.register` <- *Keeping non-resourceful naming for views*
+            - Basic form setup/styled
+        - @store  -> temp `Redirect::route('home')`
+    - Updates routes/links to use named routes...
+
+---
