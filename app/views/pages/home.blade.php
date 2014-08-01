@@ -10,7 +10,7 @@
         Take a look around...
     </p>
     <p>
-        <a href="#" class="btn btn-lg btn-primary" role="button">Sign Up</a>
+        <a href="{{route('users.create')}}" class="btn btn-lg btn-primary" role="button">Sign Up!</a>
     </p>
 </div>
 @endsection('content')

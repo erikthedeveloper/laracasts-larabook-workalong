@@ -11,4 +11,7 @@
 |
 */
 
-Route::get('/', 'PagesController@homePage');
+Route::get('/', ['as' => 'home' , 'uses' => 'PagesController@homePage']);
+
+Route::get('register', ['as' => 'users.create', 'uses' => 'UsersController@create']);
+Route::post('register', ['as' => 'users.store', 'uses' => 'UsersController@store']);
